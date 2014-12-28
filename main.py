@@ -9,9 +9,9 @@ driver.get("http://www.quora.com")
 
 #Logging in
 email = driver.find_elements_by_name('email')
-email[1].send_keys('abhyu195@gmail.com') #your email
+email[1].send_keys('your email here ') #your email
 password = driver.find_elements_by_name('password')
-password[1].send_keys('timeparadox') #your password
+password[1].send_keys('your password here') #your password
 password[1].send_keys(Keys.RETURN)
 #Login complete
 
