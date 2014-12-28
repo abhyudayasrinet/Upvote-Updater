@@ -19,7 +19,6 @@ time.sleep(10)
 
 #navigate to answer
 driver.get('http://www.quora.com/How-can-I-write-Python-script-to-automatically-edit-my-answers-on-Quora/answers/5081090')
-print('page loaded')
 
 
 #get number of votes
@@ -38,7 +37,6 @@ time.sleep(10)
 
 #find the text box(text editor of quora)
 text = driver.find_elements_by_css_selector('div.qtext_editor_content.qed_content')
-print(text)
 
 #I believe there are 3 of these. 1 for the question 1 for the question details and
 #last for my answer (since this is the page where only my existing answer shows
@@ -51,7 +49,6 @@ text[2].send_keys(newValue)
 #on all of them till the correct one was hit
 #very unsafe
 update = driver.find_elements_by_class_name('submit_button')
-print(len(update))
 for x in update:
     try:
         x.click()
