@@ -38,12 +38,15 @@ time.sleep(10)
 #find the text box(text editor of quora)
 text = driver.find_elements_by_css_selector('div.qtext_editor_content.qed_content')
 
-#I believe there are 3 of these. 1 for the question 1 for the question details and
-#last for my answer (since this is the page where only my existing answer shows
-#on the all answers page i suppose there would be more
-#clear the text and update with new number
-text[2].clear()
-text[2].send_keys(newValue)
+
+#There are multiple textboxes but only the correct one will be available
+#to edit so loop through available ones and update the correct box
+for textbox in text:
+    try:
+        textbox.clear()        
+        textbox.send_keys(newValue)
+    except :
+        pass
 
 #the update button class was used by many more buttons so i just had to hit and trial
 #on all of them till the correct one was hit
