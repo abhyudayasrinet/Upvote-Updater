@@ -70,7 +70,7 @@ print(text)
 
 
 answerText = "This answer has "+str(upvoteCount)+" upvotes.\n"
-answerText += """The code is available here : https://github.com/abhyudayasrin...
+answerText += """The code is available here : https://github.com/abhyudayasrinet/Upvote-Updater
 The script isn't running 24x7 so once you upvote the answer won't change i'll have to re run the script for it to change"""
 
 #There are multiple textboxes but only the correct one will be available
